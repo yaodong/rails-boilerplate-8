@@ -11,4 +11,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "landing#index"
+
+  # Defines the root path for authenticated users
+  get "home" => "home#index", as: :home
+
+  devise_for :users
 end
